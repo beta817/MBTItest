@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>ENTP</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body
+            {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                background-image: url(../img/wall_paper_6.jpg);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                height: 100%;
+            }
+/*-------------------TOP FRAME-------------------*/
+            .fixed-topframe
+            {
+                align-items: center;
+                text-align: center;
+                position: fixed;
+                top: 0;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                background-color: #ffffff;
+                box-shadow: 5px 0px 5px gray;
+            }
+            .left-topframe
+            {
+                padding-top: 8px;
+                padding-bottom: 2px;
+                padding-left: 10px;
+            }
+            .center-topframe
+            {
+                align-items: center;
+                text-align: center;
+                font-weight: bold;
+                display: flex;
+                height: 100%;
+                box-sizing: border-box;
+            }
+            .center-topframe-element
+            {
+                align-items: center;
+                display: grid;
+                padding: 0px 10px;
+                height: 74px;
+            }
+            .right-topframe
+            {
+                align-items: center;
+                display: grid;
+                padding: 0px 10px;
+                height: 100%;
+            }
+/*-------------------TOP FRAME-------------------*/
+/*-------------------MAIN FRAME-------------------*/
+            .main
+            {
+                margin: auto;
+            }
+            .text
+            {
+                color: white;
+                font-size: 30px;
+                font-weight: bold;
+            }
+            .MBTItext
+            {
+                color: aqua;
+                font-size: 50px;
+                font-weight: bold;
+            }
+/*-------------------MAIN FRAME-------------------*/
+        </style>
+    </head>
+    <body>
+<!--------------------TOP FRAME-------------------->
+        <div class="fixed-topframe">
+            <div class="left-topframe">
+            <a href="../mbti_test.html"><img src="../img/LOGO.png" alt="LOGO" width="60" height="60"></a>
+            </div>
+            <div class="center-topframe" >
+                <a href="../mbti_test.html" style="text-decoration: none; color: black;">
+                    <div class="center-topframe-element" style="border-top: 3px solid #fff;">
+                        성격 유형 검사
+                    </div>
+                </a>
+                
+                <div class="center-topframe-element" style="border-top: 3px solid #33A474;">
+                    결과
+                </div>
+                <a href="../personality_type.html" style="text-decoration: none; color: black;">
+                    <div class="center-topframe-element" style="border-top: 3px solid #fff;">
+                        성격 유형
+                    </div>
+                </a>
+                <a href="../inquiry.html" style="text-decoration: none; color: black;">
+                    <div class="center-topframe-element" style="border-top: 3px solid #fff;">
+                        OTHER
+                    </div>
+                </a>
+            </div>
+            <div class="right-topframe">
+                한국어
+            </div>
+        </div>
+<!--------------------TOP FRAME-------------------->
+<!--------------------MAIN FRAME-------------------->
+        <div class="main">
+            <span class="text">당신은</span>
+            <br>
+            <span class="MBTItext">ENTP</span><span class="text">입니다</span>
+            <br>
+            <span class="text">탐구형</span>
+        </div>
+<!--------------------MAIN FRAME-------------------->
+    </body>
+</html>
