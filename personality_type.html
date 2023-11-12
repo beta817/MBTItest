@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>성격 유형</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body
+            {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                background-image: url('img/wall_paper_2.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            a
+            {
+                text-decoration: none;
+                color: #000;
+            }
+/*-------------------TOP FRAME-------------------*/
+            .fixed-topframe
+            {
+                align-items: center;
+                text-align: center;
+                position: fixed;
+                top: 0;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                background-color: #ffffff;
+                box-shadow: 5px 0px 5px gray;
+            }
+            .left-topframe
+            {
+                padding-top: 8px;
+                padding-bottom: 2px;
+                padding-left: 10px;
+            }
+            .center-topframe
+            {
+                align-items: center;
+                text-align: center;
+                font-weight: bold;
+                display: flex;
+                height: 100%;
+            }
+            .center-topframe-element
+            {
+                align-items: center;
+                display: grid;
+                padding: 0px 10px;
+                height: 74px;
+            }
+            .right-topframe
+            {
+                align-items: center;
+                display: grid;
+                padding: 0px 10px;
+                height: 100%;
+            }
+/*-------------------TOP FRAME-------------------*/
+/*-------------------BOX FRAME-------------------*/
+            .main
+            {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+                gap: 10px;
+                width: 90vw;
+                height: 90vh;
+                max-width: 900px;
+                max-height: 900px;
+                margin-top: 75px;
+            }
+            .element_box
+            {
+                border-radius: 50px;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+            }
+            .head_MBTI
+            {
+                font-weight: bold; 
+                font-size: 50px;
+                margin: 25px 0px;
+            }
+            .sub_head_MBTI
+            {
+                font-weight: bold;
+                font-size: 20px;
+            }
+/*-------------------BOX FRAME-------------------*/
+            .bottom_box
+            {
+                font-size: 11px;
+                color: #d4d4d4;
+                text-align: center;
+                align-items: center;
+                background-color: #282A35;
+                width: 100px;
+                padding: 100px 150px;
+            }
+        </style>
+    </head>
+    <body>
+<!--------------------TOP FRAME-------------------->
+        <div class="fixed-topframe">
+            <div class="left-topframe">
+            <a href="mbti_test.html"><img src="img/LOGO.png" alt="LOGO" width="60" height="60"></a>
+            </div>
+            <div class="center-topframe" >
+                <a href="mbti_test.html" style="text-decoration: none; color: black;">
+                    <div class="center-topframe-element" style="border-top: 3px solid #fff;">
+                        성격 유형 검사
+                    </div>
+                </a>
+                <a href="personality_type.html" style="text-decoration: none; color: black;">
+                    <div class="center-topframe-element" style="border-top: 3px solid #fff;">
+                        결과
+                    </div>
+                </a>
+                <a href="personality_type.html" style="text-decoration: none; color: black;">
+                    <div class="center-topframe-element" style="border-top: 3px solid #33A474;">
+                        성격 유형
+                    </div>
+                </a>
+                <a href="inquiry.html" style="text-decoration: none; color: black;">
+                    <div class="center-topframe-element" style="border-top: 3px solid #fff;">
+                        OTHER
+                    </div>
+                </a>
+            </div>
+            <div class="right-topframe">
+                한국어
+            </div>
+        </div>
+<!--------------------TOP FRAME-------------------->
+<!--------------------MAIN FRAME-------------------->
+        <div class="main">
+            <a class="element_box" style="background-color: #D6ECE3;" href="MBTI/ENFJ.html">
+                <div class="head_MBTI">ENFJ</div>
+                <span class="sub_head_MBTI">대가리 꽃밭형</span>
+            </a>
+            <a class="element_box" style="background-color: #D6ECE3;" href="MBTI/ENFP.html">
+                <div class="head_MBTI">ENFP</div>
+                <span class="sub_head_MBTI">피터팬 증후군형</span>
+            </a>
+            <a class="element_box" style="background-color: #E7DFEA;" href="MBTI/ENTJ.html">
+                <div class="head_MBTI">ENTJ</div>
+                <span class="sub_head_MBTI">애새끼형</span>
+            </a>
+            <a class="element_box" style="background-color: #E7DFEA;" href="MBTI/ENTP.html">
+                <div class="head_MBTI">ENTP</div>
+                <span class="sub_head_MBTI">합리화의 달인형</span>
+            </a>
+            <a class="element_box" style="background-color: #F9EED7;" href="MBTI/ESFJ.html">
+                <div class="head_MBTI">ESFJ</div>
+                <span class="sub_head_MBTI">착한아이 증후군형</span>
+            </a>
+            <a class="element_box" style="background-color: #D9EAF0;" href="MBTI/ESFP.html">
+                <div class="head_MBTI">ESFP</div>
+                <span class="sub_head_MBTI">땡깡형</span>
+            </a>
+            <a class="element_box" style="background-color: #D9EAF0;" href="MBTI/ESTJ.html">
+                <div class="head_MBTI">ESTJ</div>
+                <span class="sub_head_MBTI">어릿광대형</span>
+            </a>
+            <a class="element_box" style="background-color: #F9EED7;" href="MBTI/ESTP.html">
+                <div class="head_MBTI">ESTP</div>
+                <span class="sub_head_MBTI">트럼프, 홍준표형</span>
+            </a>
+            <a class="element_box" style="background-color: #D6ECE3;" href="MBTI/INFJ.html">
+                <div class="head_MBTI">INFJ</div>
+                <span class="sub_head_MBTI">개복치형</span>
+            </a>
+            <a class="element_box" style="background-color: #D6ECE3;" href="MBTI/INFP.html">
+                <div class="head_MBTI">INFP</div>
+                <span class="sub_head_MBTI">선택적 공감형</span>
+            </a>
+            <a class="element_box" style="background-color: #E7DFEA;" href="MBTI/INTJ.html">
+                <div class="head_MBTI">INTJ</div>
+                <span class="sub_head_MBTI">소통고자형</span>
+            </a>
+            <a class="element_box" style="background-color: #E7DFEA;" href="MBTI/INTP.html">
+                <div class="head_MBTI">INTP</div>
+                <span class="sub_head_MBTI">싸이코형</span>
+            </a>
+            <a class="element_box" style="background-color: #F9EED7;" href="MBTI/ISFJ.html">
+                <div class="head_MBTI">ISFJ</div>
+                <span class="sub_head_MBTI">꼰대형</span>
+            </a>
+            <a class="element_box" style="background-color: #D9EAF0;" href="MBTI/ISFP.html">
+                <div class="head_MBTI">ISFP</div>
+                <span class="sub_head_MBTI">베짱이형</span>
+            </a>
+            <a class="element_box" style="background-color: #D9EAF0;" href="MBTI/ISTJ.html">
+                <div class="head_MBTI">ISTJ</div>
+                <span class="sub_head_MBTI">똥꼬집형</span>
+            </a>
+            <a class="element_box" style="background-color: #F9EED7;" href="MBTI/ISTP.html">
+                <div class="head_MBTI">ISTP</div>
+                <span class="sub_head_MBTI">역지사지 고자형</span>
+            </a>
+        </div>
+<!--------------------MAIN FRAME-------------------->
+    </body>
+</html>

@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>무료 성격유형검사</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body
+            {
+                text-align: center;
+                background-color: #fff;
+            }
+            hr
+            {
+                color: #d6d6d6;
+                margin: 20px 0px;
+            }
+            form
+            {   
+                text-align: center;
+            }
+            a
+            {
+                text-decoration: none;
+            }
+/*-------------------TOP FRAME-------------------*/
+            .fixed-topframe
+            {
+                align-items: center;
+                text-align: center;
+                position: fixed;
+                top: 0;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                background-color: #ffffff;
+                box-shadow: 5px 0px 5px gray;
+            }
+            .left-topframe
+            {
+                padding-top: 8px;
+                padding-bottom: 2px;
+                padding-left: 10px;
+            }
+            .center-topframe
+            {
+                align-items: center;
+                text-align: center;
+                font-weight: bold;
+                display: flex;
+                height: 100%;
+            }
+            .center-topframe-element
+            {
+                align-items: center;
+                display: grid;
+                padding: 0px 10px;
+                height: 74px;
+            }
+            .right-topframe
+            {
+                align-items: center;
+                display: grid;
+                padding: 0px 10px;
+                height: 100%;
+            }
+/*-------------------TOP FRAME-------------------*/
+/*-------------------MAIN TOP FRAME-------------------*/
+            .main-top
+            {
+                text-align: center;
+                padding: 75px 20px;
+                background-color: #33A474;
+            }
+            .main-top-head-text
+            {
+                color: #ffffff;
+                font-size: 55px;
+                font-weight: bold;
+                margin: 30px 0px
+            }
+            .main-top-head-sub-text
+            {
+                color: #ffffff;
+                font-size: 25px;
+                font-weight: 2px;
+            }
+            .main-sub-top
+            {
+                text-align: center;
+                background: linear-gradient(to bottom, #33A474 50%, #fff 50%);
+            }
+            .notice
+            {
+                display: flex;
+                justify-content: center;
+                margin: 0px auto;
+                width: 100%;
+            }
+            .notic-box
+            {
+                
+                background-color: #ffffff;
+                flex: 1;
+                padding: 30px;
+                border-radius: 50px;
+                margin: 0px 20px;
+                max-width: 275px;
+                max-height: 400px;
+            }
+/*-------------------MAIN TOP FRAME-------------------*/
+/*-------------------MAIN FRAME-------------------*/
+            .main-box
+            {
+                align-items: center;
+                padding: 15px;
+                text-align: center;
+                margin: 0 auto;
+                max-width: 1200px;
+            }
+            .question
+            {
+                width: 100%;
+                padding-top: 80px;
+                padding-bottom: 115px;
+            }
+            .question-text
+            {
+                color: #696969;
+                font-size: 25px;
+                font-weight: bold;
+            }
+            .question-choos
+            {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                margin-top: 90px;
+            }
+            .question-checkbox-bundle
+            {
+                align-items: center;
+                display: flex;
+                flex: 0 0 400px;
+                justify-content: space-between;
+                margin: 0px 60px;
+            }
+            .question-checkbox-1
+            {
+                width: 70px;
+                height: 70px;
+                cursor: pointer;
+                appearance: none;
+            }
+            .question-checkbox-1::before
+            {
+                content: "";
+                display: inline-block;
+                width: 70px;
+                height: 70px;
+                background-color: #fff;
+                border: 2px solid #33A474;
+                border-radius: 50%;
+            }
+            .question-checkbox-1:hover::before
+            {
+                background-color: #33A474;
+            }
+            .question-checkbox-1:checked::before
+            {
+                background-color: #33A474;
+            }
+            .question-checkbox-2
+            {
+                width: 45px;
+                height: 45px;
+                cursor: pointer;
+                appearance: none;
+            }
+            .question-checkbox-2::before
+            {
+                content: "";
+                display: inline-block;
+                width: 45px;
+                height: 45px;
+                background-color: #fff;
+                border: 2px solid #33A474;
+                border-radius: 50%;
+            }
+            .question-checkbox-2:hover::before
+            {
+                background-color: #33A474;
+            }
+            .question-checkbox-2:checked::before
+            {
+                background-color: #33A474;
+            }
+            .question-checkbox-3
+            {
+                width: 45px;
+                height: 45px;
+                cursor: pointer;
+                appearance: none;
+            }
+            .question-checkbox-3::before
+            {
+                content: "";
+                display: inline-block;
+                width: 45px;
+                height: 45px;
+                background-color: #fff;
+                border: 2px solid #88619A;
+                border-radius: 50%;
+            }
+            .question-checkbox-3:hover::before
+            {
+                background-color: #88619A;
+            }
+            .question-checkbox-3:checked::before
+            {
+                background-color: #88619A;
+            }
+            .question-checkbox-4
+            {
+                width: 70px;
+                height: 70px;
+                cursor: pointer;
+                appearance: none;
+            }
+            .question-checkbox-4::before
+            {
+                content: "";
+                display: inline-block;
+                width: 70px;
+                height: 70px;
+                background-color: #fff;
+                border: 2px solid #88619A;
+                border-radius: 50%;
+            }
+            .question-checkbox-4:hover::before
+            {
+                background-color: #88619A;
+            }
+            .question-checkbox-4:checked::before
+            {
+                background-color: #88619A;
+            }
+            .agree
+            {
+                align-items: center;
+                color: #33A474;
+                display: inline-block;
+                font-size: 25px;
+                font-weight: bold;
+            }
+            .disagree
+            {
+                color: #88619A;
+                display: inline-block;
+                font-size: 25px;
+                font-weight: bold;
+            }
+            .submit_box
+            {
+                width: 100%;
+                margin-bottom: 100px;
+            }
+            .submit_btn
+            {
+                color: #fff;
+                font-size: 20px;
+                font-weight: bold;
+                text-align: center;
+                align-items: center;
+                display: inline-block;
+                border-radius: 50px;
+                padding: 20px 150px;
+                border: none;
+                background-color: #6E6EFF;
+            }
+            .bottom_box
+            {
+                font-size: 11px;
+                color: #d4d4d4;
+                text-align: center;
+                align-items: center;
+                background-color: #282A35;
+                padding: 100px 150px;
+            }
+/*-------------------MAIN FRAME-------------------*/
+        </style>
+    </head>
+<!--------------------TOP FRAME-------------------->
+        <div class="fixed-topframe">
+            <div class="left-topframe">
+            <a href="mbti_test.html"><img src="img/LOGO.png" alt="LOGO" width="60" height="60"></a>
+            </div>
+            <div class="center-topframe" >
+                <a href="mbti_test.html" style="text-decoration: none; color: black;">
+                    <div class="center-topframe-element" style="border-top: 3px solid #33A474;">
+                        성격 유형 검사
+                    </div>
+                </a>
+                <a href="personality_type.html" style="text-decoration: none; color: black;">
+                    <div class="center-topframe-element" style="border-top: 3px solid #fff;">
+                        결과
+                    </div>
+                </a>
+                <a href="personality_type.html" style="text-decoration: none; color: black;">
+                    <div class="center-topframe-element" style="border-top: 3px solid #fff;">
+                        성격 유형
+                    </div>
+                </a>
+                <a href="inquiry.html" style="text-decoration: none; color: black;">
+                    <div class="center-topframe-element" style="border-top: 3px solid #fff;">
+                        OTHER
+                    </div>
+                </a>
+            </div>
+            <div class="right-topframe">
+                한국어
+            </div>
+        </div>
+<!--------------------TOP FRAME-------------------->
+<!--------------------MAIN TOP FRAME-------------------->
+
+        <div class="main-top">
+            <div class="main-top-head-text">
+                무료 성격유형검사
+            </div>
+            <div class="main-top-head-sub-text" >
+                Made by <a href="https://www.instagram.com/tall_jae/" target="_blank" style="text-decoration: none; color: white;"><span>남궁성재</span></a>
+            </div>
+        </div>
+        <div class="main-sub-top">
+            <div class="notice">
+                ㅤ<!--공백문자-->
+                <div class="notic-box" style="background-color: #D8E9EF;">
+                    <img src="img/mouse.png" alt="mouse" width="90" height="90" style="margin-bottom: 20px;">
+                    <br>
+                    시간제한은 없으니 한 문장에 너무 오래 머물지 말 것
+                </div>
+                <div class="notic-box" style="background-color: #ECE4D5;">
+                    <img src="img/squirrel.png" alt="mouse" width="90" height="90" style="margin-bottom: 20px;">
+                    <br>
+                    이상적이거나 앞으로 그렇게 되기를 바라는 문항에 응답하지 말 것
+                </div>
+                <div class="notic-box" style="background-color: #EDDEF5;">
+                    <img src="img/koala.png" alt="mouse" width="90" height="90" style="margin-bottom: 20px;">
+                    <br>
+                    좋고 나쁜 유형은 없으므로 의식적으로 대답하지 말 것
+                </div>
+                ㅤ<!--공백문자-->
+            </div>
+        </div>
+<!--------------------MAIN TOP FRAME-------------------->
+<!--------------------MAIN FRAME-------------------->
+        <form>
+            <div class="main-box">
+<!--------------------QUESTION_1 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        마주치는 사람마다 친구가 된다.
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_E1" name="Q1_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_E2" name="Q1_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_E3" name="Q1_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_E4" name="Q1_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_1 FRAME-------------------->
+<!--------------------QUESTION_2 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        다른 사람을 마주치면 스트레스로 폐사한다.
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_I1" name="Q2_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_I2" name="Q2_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_I3" name="Q2_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_I4" name="Q2_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_2 FRAME-------------------->
+<!--------------------QUESTION_3 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        산타는 없다.
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_S1" name="Q3_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_S2" name="Q3_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_S3" name="Q3_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_S4" name="Q3_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_3 FRAME-------------------->
+<!--------------------QUESTION_4 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        하루에 23시간 정도를 망상을 하면서 보낸다.
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_N1" name="Q4_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_N2" name="Q4_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_N3" name="Q4_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_N4" name="Q4_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_4 FRAME-------------------->
+<!--------------------QUESTION_5 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        알몸으로 밖을 돌아다녀도 수치심을 느끼지 않는다.
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_T1" name="Q5_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_T2" name="Q5_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_T3" name="Q5_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_T4" name="Q5_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_5 FRAME-------------------->
+<!--------------------QUESTION_6 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        고양이가 유기당하는 것을 보면 슬프다.
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_F1" name="Q6_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_F2" name="Q6_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_F3" name="Q6_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_F4" name="Q6_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_6 FRAME-------------------->
+<!--------------------QUESTION_7 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        초단위로 계획을 세운다.
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_J1" name="Q7_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_J2" name="Q7_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_J3" name="Q7_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_J4" name="Q7_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_7 FRAME-------------------->
+<!--------------------QUESTION_8 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        동전던지기를 해 세계여행을 할 수 있다.
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_P1" name="Q8_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_P2" name="Q8_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_P3" name="Q8_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_P4" name="Q8_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_8 FRAME-------------------->
+<!--------------------QUESTION_9 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        친구와 20시간 이상 떠들 수 있다.
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_E5" name="Q9_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_E6" name="Q9_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_E7" name="Q9_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_E8" name="Q9_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_9 FRAME-------------------->
+<!--------------------QUESTION_10 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        사람한테 말을 걸기 힘들다.
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_I5" name="Q10_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_I6" name="Q10_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_I7" name="Q10_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_I8" name="Q10_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_10 FRAME-------------------->
+<!--------------------QUESTION_11 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        망상은 쓸모없는것이라 생각한다.
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_S5" name="Q11_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_S6" name="Q11_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_S7" name="Q11_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_S8" name="Q11_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_11 FRAME-------------------->
+<!--------------------QUESTION_12 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        지구는 평평하다
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_N5" name="Q12_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_N6" name="Q12_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_N7" name="Q12_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_N8" name="Q12_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_12 FRAME-------------------->
+<!--------------------QUESTION_13 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        아프리카에서 굶주리고있는 어린이를봐도 아무 감정이 들지 않는다.
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_T5" name="Q13_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_T6" name="Q13_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_T7" name="Q13_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_T8" name="Q13_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_13 FRAME-------------------->
+<!--------------------QUESTION_14 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        ㅠㅠ
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_F5" name="Q14_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_F6" name="Q14_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_F7" name="Q14_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_F8" name="Q14_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_14 FRAME-------------------->
+<!--------------------QUESTION_15 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        계획을 세우지 않을빠엔 할복을 하겠다.
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_J5" name="Q15_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_J6" name="Q15_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_J7" name="Q15_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_J8" name="Q15_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_15 FRAME-------------------->
+<!--------------------QUESTION_16 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        그때그때 꼴리는대로 행동한다.
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_P5" name="Q16_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_P6" name="Q16_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_P7" name="Q16_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_P8" name="Q16_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_16 FRAME-------------------->
+<!--------------------QUESTION_17 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        모르는 사람과 단둘이 롯데월드 데이트를 할 수 있다.(남녀무관)
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_E9" name="Q17_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_E10" name="Q17_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_E11" name="Q17_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_E12" name="Q17_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_17 FRAME-------------------->
+<!--------------------QUESTION_18 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        사람이 3명 이상 모인것을 보면 기가 빨린다.
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_I9" name="Q18_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_I10" name="Q18_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_I11" name="Q18_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_I12" name="Q18_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_18 FRAME-------------------->
+<!--------------------QUESTION_19 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        세상에 있는 모든 종교는 사이비라 생각한다.
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_S9" name="Q19_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_S10" name="Q19_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_S11" name="Q19_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_S12" name="Q19_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_19 FRAME-------------------->
+<!--------------------QUESTION_20 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        일루미나티는 있다.
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_N9" name="Q20_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_N10" name="Q20_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_N11" name="Q20_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_N12" name="Q20_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_20 FRAME-------------------->
+<!--------------------QUESTION_21 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        다른사람이 싸우는 것을 보면 재밌다.
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_T9" name="Q21_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_T10" name="Q21_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_T11" name="Q21_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_T12" name="Q21_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_21 FRAME-------------------->
+<!--------------------QUESTION_22 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        이성보단 감성적으로 행동한다.
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_F9" name="Q22_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_F10" name="Q22_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_F11" name="Q22_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_F12" name="Q22_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_22 FRAME-------------------->
+<!--------------------QUESTION_23 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        내 계획대로 일이 흘러가지 않으면 할복한다.
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_J9" name="Q23_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_J10" name="Q23_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_J11" name="Q23_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_J12" name="Q23_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_23 FRAME-------------------->
+<!--------------------QUESTION_24 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        내 방은 돼지우리와 유사하다.
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_P9" name="Q24_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_P10" name="Q24_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_P11" name="Q24_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_P12" name="Q24_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_24 FRAME-------------------->
+<!--------------------QUESTION_25 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        아무나 붙잡고 1시간동안 얘기할 수 있다.
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_E13" name="Q25_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_E14" name="Q25_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_E15" name="Q25_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_E16" name="Q25_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_25 FRAME-------------------->
+<!--------------------QUESTION_26 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        앞에 나서서 발표를 할빠엔 할복을 하겠다.
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_I13" name="Q26_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_I14" name="Q26_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_I15" name="Q26_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_I16" name="Q26_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_26 FRAME-------------------->
+<!--------------------QUESTION_27 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        수업내용이 이해 안되더라도 일단 외운다.
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_S13" name="Q27_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_S14" name="Q27_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_S15" name="Q27_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_S16" name="Q27_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_27 FRAME-------------------->
+<!--------------------QUESTION_28 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        요리를 할때 레시피보단 감을 믿는다.
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_N13" name="Q28_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_N14" name="Q28_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_N15" name="Q28_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_N16" name="Q28_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_28 FRAME-------------------->
+<!--------------------QUESTION_29 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        장례식장에서 육개장 맛을 평가한다.
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_T13" name="Q29_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_T14" name="Q29_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_T15" name="Q29_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_T16" name="Q29_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_29 FRAME-------------------->
+<!--------------------QUESTION_30 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        현실적인 피드백보단 공감이 중요하다.
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_F13" name="Q30_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_F14" name="Q30_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_F15" name="Q30_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_F16" name="Q30_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_30 FRAME-------------------->
+<!--------------------QUESTION_31 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        본인인증을 할때 어플로 한다.
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_J13" name="Q31_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_J14" name="Q31_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_J15" name="Q31_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_J16" name="Q31_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_31 FRAME-------------------->
+<!--------------------QUESTION_32 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        일이 항상 쌓여있다.
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_P13" name="Q32_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_P14" name="Q32_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_P15" name="Q32_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_P16" name="Q32_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_32 FRAME-------------------->
+<!--------------------QUESTION_33 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        오지랖이 넓다.
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_E17" name="Q33_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_E18" name="Q33_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_E19" name="Q33_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_E20" name="Q33_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_33 FRAME-------------------->
+<!--------------------QUESTION_34 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        배달 주문을 전화로하면 과호흡이 온다.
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_I17" name="Q34_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_I18" name="Q34_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_I19" name="Q34_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_I20" name="Q34_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_34 FRAME-------------------->
+<!--------------------QUESTION_35 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        내가 본 것이 아니면 믿지 않는다.
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_S17" name="Q35_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_S18" name="Q35_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_S19" name="Q35_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_S20" name="Q35_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_35 FRAME-------------------->
+<!--------------------QUESTION_36 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        철학절 질문에 대해 생각하는 것이 재밌다.
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_N17" name="Q36_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_N18" name="Q36_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_N19" name="Q36_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_N20" name="Q36_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_36 FRAME-------------------->
+<!--------------------QUESTION_37 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        목적을 이루기 위해서 무엇이든지 한다.
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_T17" name="Q37_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_T18" name="Q37_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_T19" name="Q37_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_T20" name="Q37_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_37 FRAME-------------------->
+<!--------------------QUESTION_38 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        타인에게 쉽게 공감한다.
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_F17" name="Q38_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_F18" name="Q38_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_F19" name="Q38_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_F20" name="Q38_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_38 FRAME-------------------->
+<!--------------------QUESTION_39 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        일이 잘못될 때를 대비해 여러 대비책을 세우는 편이다.
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_J17" name="Q39_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_J18" name="Q39_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_J19" name="Q39_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_J20" name="Q39_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_39 FRAME-------------------->
+<!--------------------QUESTION_40 FRAME-------------------->
+                <hr>
+                <div class="question">
+                    <div class="question-text">
+                        계획적인것보단 즉흥적으로 행동한다.
+                    </div>
+                    <div class="question-choos">
+                        <div class="agree">
+                            동의
+                        </div>
+                        <div class="question-checkbox-bundle">
+                            <input type="radio" id="radio_P17" name="Q40_Group" class="question-checkbox-1" value="option_1">
+                            <input type="radio" id="radio_P18" name="Q40_Group" class="question-checkbox-2" value="option_2">
+                            <input type="radio" id="radio_P19" name="Q40_Group" class="question-checkbox-3" value="option_3">
+                            <input type="radio" id="radio_P20" name="Q40_Group" class="question-checkbox-4" value="option_4">
+                        </div>
+                        <div class="disagree">
+                            비동의
+                        </div>
+                    </div>
+                </div>
+<!--------------------QUESTION_40 FRAME-------------------->
+<!--------------------SUBMIT FRAME-------------------->
+                <div class="submit_box">
+                    <a class="submit_btn" style="cursor: pointer;" onclick="submitMBTI()">제출</a>
+                </div>
+<!--------------------SUBMIT FRAME-------------------->
+            </div>
+        </form>
+<!--------------------MAIN FRAME-------------------->
+<!--------------------BOTTOM FRAME-------------------->
+        <div class="bottom_box">
+            제작: 이성재 <a href="https://www.instagram.com/tall_jae/" target="_blank"><img src="img/instagram.png" width="10px" height="10px"></a>
+            <br>
+            <br>
+            제작자 MBTI: ENTP
+            <br>
+            <br>
+            <div>
+                이 사이트의 내용은 내 맘에따라 수시로 변동될 수 있습니다.
+                <br>
+                특정 MBTI를 비방할 의도는 없습니다. 재미로만 즐겨주세요.
+                <br>
+                사이트에 대한 문의는 tjdeo123ri@gmail.com이나 인스타로 문의 주시면 문의사항에 대해 곰곰이 생각해본 다음 수정을 할 수도 있고 안 할 수도 있습니다.
+            </div>
+        </div>
+<!--------------------BOTTOM FRAME-------------------->
+        <script src="function.js">
+        </script>
+    </body>
+</html>
