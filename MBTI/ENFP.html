@@ -9,6 +9,19 @@
                 padding: 0;
                 box-sizing: border-box;
             }
+            body
+            {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                background-image: url(../img/wall_paper_7.jpg);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                height: 100vh;
+            }
 /*-------------------TOP FRAME-------------------*/
             .fixed-topframe
             {
@@ -52,16 +65,36 @@
                 height: 100%;
             }
 /*-------------------TOP FRAME-------------------*/
+/*-------------------MAIN FRAME-------------------*/
+            .main
+            {
+                margin: 0px auto;
+            }
+            .text
+            {
+                color: white;
+                font-size: 60px;
+                font-weight: bold;
+                -webkit-text-stroke: 1px #000;
+            }
+            .MBTItext
+            {
+                color: white;
+                font-size: 80px;
+                font-weight: bold;
+		        -webkit-text-stroke: 3px #FFD700;
+            }
+/*-------------------MAIN FRAME-------------------*/
         </style>
     </head>
     <body>
 <!--------------------TOP FRAME-------------------->
         <div class="fixed-topframe">
             <div class="left-topframe">
-            <a href="../mbti_test.html"><img src="../img/LOGO.png" alt="LOGO" width="60" height="60"></a>
+            <a href="../index.html"><img src="../img/LOGO.png" alt="LOGO" width="60" height="60"></a>
             </div>
             <div class="center-topframe" >
-                <a href="../mbti_test.html" style="text-decoration: none; color: black;">
+                <a href="../index.html" style="text-decoration: none; color: black;">
                     <div class="center-topframe-element" style="border-top: 3px solid #fff;">
                         성격 유형 검사
                     </div>
@@ -87,8 +120,13 @@
         </div>
 <!--------------------TOP FRAME-------------------->
 <!--------------------MAIN FRAME-------------------->
-        <div class="main-top">
-            
+        <div class="main">
+            <span class="text">당신은</span>
+            <br>
+            <span class="MBTItext">ENFP</span><span class="text">입니다</span>
+            <br>
+            <br>
+            <span class="text">피터팬 증후군형</span>
         </div>
 <!--------------------MAIN FRAME-------------------->
     </body>
